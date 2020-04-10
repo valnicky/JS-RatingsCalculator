@@ -15,7 +15,6 @@ function collect_ratings() {
     }
 
     return ratings;
-    console.log(ratings);
 }
 
 document.addEventListener('change', () => {
