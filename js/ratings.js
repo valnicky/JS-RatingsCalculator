@@ -5,9 +5,19 @@ function collect_ratings() {
     const elements = document.querySelectorAll('.rating');
 
     elements.forEach(element => {
-        rating = element.id.replace('star', '');
+        rating = parseInt(element.id.replace('star', ''));
+        ratings.sum = parseInt(element.value) * rating;
+        ratings.count = + parseInt(element.value);
     });
+    if (ratings.count !== 0) {
+        let average = sum / count;
+    }
 
-    console.log(element.id);
+    return ratings;
+    console.log(ratings);
 }
 
+document.addEventListener('change', () => {
+    let ratings = collect_ratings();
+    ratings.average = document.querySelector('#average').value;
+};
