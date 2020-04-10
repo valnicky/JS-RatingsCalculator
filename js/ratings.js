@@ -7,4 +7,7 @@ function collect_ratings() {
     elements.foreach(element => {
         rating = element.id.replace('star', '');
     });
+
+    console.log(element.id);
 }
+
